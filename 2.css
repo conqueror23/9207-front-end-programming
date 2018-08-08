@@ -1,0 +1,140 @@
+
+body{
+    background-image: url(wood1.png);
+    width: 900px;
+
+}
+h1{
+    font-style: italic;
+    margin: auto;
+    color: skyblue;
+}
+h3{
+    color: white;
+}
+tr:hover{
+    display: block;
+    color: red;
+}
+tr:nth-child(odd){
+background-color: grey;
+}
+#navi{
+    width: 830px;
+    height:120px;
+    list-style-type: none;
+    position: absolute;
+    margin:0px 0px 0px 100px;
+    background-image:url("bw4.jpg"); 
+}
+
+#nb li{
+    display: inline-block;
+
+}
+th,td{
+    border: solid;
+}
+p{
+    margin: 20px;
+}
+div.main{
+    position: absolute;
+    margin: 120px 0px 0px 180px;
+    width: 700px;
+    height: 22in;
+    background-image: url(wood1.png);
+    border: solid lightblue;
+    padding: 20px 20px 40px 20px;
+}
+.main figure{
+    margin: 100px;
+    float: both;
+}
+.main p{
+    color: orange;
+}
+
+#p2{
+    border: solid red;
+    height: 100px;
+    overflow: hidden;
+}
+#p3{
+    border: solid red;
+    overflow: scroll;
+    height: 50px;
+}
+#p4{
+    border: solid red;
+    height: 50px;
+    overflow: auto;
+}
+
+#hwl{
+    float: right;
+}
+#referr{
+    position: fixed;
+    bottom: 20px;
+    width:280px;
+
+}
+#tool{
+    position: absolute;
+    margin:120px 0px 0px 100px;
+    width: 72px;
+    height:320px;
+    border: solid grey;
+    float: left;
+    padding: 0px 2px 0px 0px;
+    
+}
+#time{
+    font-family: italic;
+    position: absolute;
+    margin:3in 0in 12in 10in;
+    border: 1mm,solid red;
+    color: white;
+}
+#bottom{
+    display: block;
+    position: absolute;
+    margin:2300px 0px 5px 500px;
+    color: silver; 
+    border: solid white;
+    align-content: middle;
+}
+#bib{
+    float: initial;
+    height: 100px;
+    overflow: visible;
+    border: solid red;
+}
+#bib img{
+    float: initial;
+}
+a{
+    color: lightyellow;
+}
+a:visited {
+    color:lightyellow; 
+}
+a:hover{
+    color: orange;
+}
+#popup{
+    position: absolute;
+    visibility: hidden;
+}
+
+#s#thumbnail:hover #popup{
+    position: absolute;
+    top: 0;
+    left: 150px;
+    visibility: visible;
+}
+div#s{
+    position: absolute;
+    margin:20in 0 0 2in;
+}

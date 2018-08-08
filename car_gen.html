@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<table border="1">
+    <th>
+        make
+    </th>
+    <th>
+        name
+    </th>
+    <th>
+        color
+    </th>
+    <th>
+        year
+    </th>
+    <th>
+        feul
+    </th>
+    <th>
+        transmission
+    </th>
+        <tr>
+            <td>
+            <p id='make'></p>
+                </td>
+            <td>
+                <p id="name"></p>
+                </td>
+                <td>
+                <p id="color"></p>
+                </td>
+                <td>
+                <p id="year"></p>
+                </td>
+                <td>
+                <p id="feul"></p>
+                </td>
+                <td>
+                <p id="trans"></p>
+                </td>
+            </tr>
+</table>
+
+<p id="test"></p>
+
+<!--
+<input type='button' value="generatecar" onclick="function gen_car()">
+-->
+
+<script >
+    function car(make,name,color,year,feul,trans){
+            this.make=make;
+            this.name=name;
+            this.color=color;
+            this.year=year;
+            this.feul=feul;
+            this.trans=trans;
+        }
+        var camry=new car('toyota','camry','gold',2004,'6L','auto');
+        var mazda=new car('mazda','maxx','silver',2010,'7.9L','manual');
+        var p308=new car('peugeot','308','grey',2017,'4.1L','auto');
+        var p308gt=new car('peugeot','308','red',2016,'4L','auto');
+        var prius=new car('toyota','prius','whtie',2010,'3.9L','auto');
+    
+    var cars=[camry,mazda,p308,p308gt,prius];
+    var select=Math.floor(Math.random()*5);
+    var carc=cars[select];
+    
+    document.getElementById('make').innerHTML=camry.make;
+    
+     document.getElementById('name').innerHTML=' '+carc.name;
+     document.getElementById('year').innerHTML=' '+carc.year;
+     document.getElementById('color').innerHTML=' '+carc.color;
+     document.getElementById('feul').innerHTML=' '+carc.feul;
+     document.getElementById('trans').innerHTML=' '+carc.trans;
+// constructor
+    
+
+</script>
+</body>
+</html>

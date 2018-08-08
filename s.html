@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+#popup{
+    position: absolute;
+    visibility: hidden;
+}
+#thumbnail:hover #popup{
+    position: absolute;
+    top: 0;
+    left: 100px;
+    visibility: visible;
+}
+</style>
+</head>
+<body>
+<div class="main">
+<figure id="thumbnail">
+    <img src="lib3.jpg" style="width: 50mm;height: 50mm;">
+    <figcaption id="popup">
+        <img src="lib3.jpg" style="width: 100mm;height: 100mm;">
+    </figcaption>
+</figure>
+</div>
+</body>
+</html>
