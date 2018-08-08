@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<style type="text/css">
+			.element-container {
+				position: relative;
+			}
+			.element-container div {
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript" src="1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var container = $('.element-container');
+				var textFill=[];
+				textFill[0]="PHP"; textFill[1]=" "; textFill[2]=" "; textFill[3]="C++";textFill[4]=" ";
+				textFill[5]=" "; textFill[6]="VBA"; textFill[7]=" ";textFill[8]=""; textFill[9]="ADO";textFill[10]=" "
+				textFill[11]=" "; textFill[12]="ASP"; textFill[13]=" ";textFill[14]="C#";textFill[15]=" ";textFill[16]=" ";
+				var divs = [];
+				var size = 1000;
+				var time_interval = 10000;//ten seconds
+				for (var i=0; i<size; i++) {
+					var div = {
+						direction: 'right',
+						element: $('<div style="background:#ff0000;left:100px;top:100px;height:100px;width:100px;position:absolute;" id="a"><b>'+textFill[i%17]+'</b></div>')
+					};
+					div.element.css('top', 1 *i+'px');
+                    change_color(div.element)
+					container.append(div.element);
+					divs.push(div);
+				}
+				var animate = function(i, direction) {
+					var div = divs[i];
+					change_color(div.element)
+					if (direction == undefined) {
+						direction = div.direction;
+					} else {
+						div.direction = direction;
+					}
+					var position = direction=='left' ? '0px' : '1200px';
+					div.element.animate({
+						left: position
+					}, time_interval+(i*60), function() {
+						var nextDirection = direction=='left' ? 'right' : 'left';
+						animate(i, direction=='left' ? 'right' : 'left');
+					});
+				};
+				for (var i=0; i<size; i++) animate(i);
+				function change_color(obj)
+				{
+				  red = Math.floor(Math.random() * 255)
+				  green= Math.floor(Math.random() * 255)
+				  blue= Math.floor(Math.random() * 255)
+				  rgb="rgb("+red+","+green+","+blue+")";
+				  obj.css("background-color",rgb);
+				  rgb_opposite="rgb(255,255,255)";//white
+				  obj.css("color",rgb_opposite);
+				}
+			});
+		</script>
+	</head>
+	<body background="bg.jpg">
+		<div class="element-container"></div>
+	</body>
+</html>

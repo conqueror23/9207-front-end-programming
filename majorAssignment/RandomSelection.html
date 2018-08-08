@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="1.js"></script>
+<script>
+var Stopped=false;
+var TimeInterval=1000; //milli-second
+var b=["#a", "#b", "#c", "#d" ,"#e" ,"#f"]
+function forward(){
+  i=Math.floor(Math.random() * 6);
+  var pos=$(b[i]).position().left;
+  if(pos<500)
+      {
+              $(b[i]).animate({
+              left:'1000px',
+          },TimeInterval,forward);
+  }
+  else {
+    $(b[i]).animate({
+      left:'0px',
+    },TimeInterval,forward);
+  }
+}
+$(document).ready(function(){
+   $("#m").click(forward);
+   $("#fast").click(function(){
+      TimeInterval=TimeInterval*0.9
+   });
+   $("#slow").click(function(){
+      TimeInterval=TimeInterval/0.9
+   });
+});
+</script>
+</head>
+<body>
+<button id="m" >Start Animation</button>
+<button id="fast">Faster</button>
+<button id="slow">Slower</button>
+<div style="background:#ff0000;left:100px;top:100px;height:100px;width:100px;position:absolute;" id="a">
+Learn
+</div>
+<div style="background:#00ff00;left:200px;top:100px;height:100px;width:100px;position:absolute;" id="b">
+jQuery
+</div>
+<div style="background:#0000ff;left:300px;top:100px;height:100px;width:100px;position:absolute;" id="c">
+very
+</div>
+<div style="background:#ffff00;left:400px;top:100px;height:100px;width:100px;position:absolute;" id="d">
+effectively
+</div>
+<div style="background:#ff00ff;left:500px;top:100px;height:100px;width:100px;position:absolute;" id="e">
+Learn
+</div>
+<div style="background:#00ffff;left:600px;top:100px;height:100px;width:100px;position:absolute;" id="f">
+</body>
+</html>

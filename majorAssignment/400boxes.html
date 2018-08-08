@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <style>
+            .swing {position: relative; }
+            .swing div {position: absolute; }
+        </style>
+        <script>
+            $(document).ready(function(){
+                var divs=[];
+                var size=400;
+                var time=2000;
+                function randomColor(args){
+                    r=Math.floor(Math.random()*255);
+                    g=Math.floor(Math.random()*255);
+                    b=Math.floor(Math.random()*255);
+                    rgb="rgb("+r+","+g+","+b+")";
+                    args.css("background-color",rgb);
+                }
+                function Moving(i) {
+                    var div=divs[i].element;
+                    div.animate({left:'1000px'},time+50*i,function() {
+                        div.animate({left:'0px'},time+50*i);
+                        Moving(i);
+                    })
+                };
+                for(var i=0;i<size;i++){
+                    var div={
+                        element:$('<div style="height:100px;width:100px;position:absolute;"></div>')
+                    }
+                    div.element.css('top',i+'px');
+                    randomColor(div.element);
+                    $(".swing").append(div.element);
+                    divs.push(div);
+                    Moving(i);
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <div class="swing"></div>
+    </body>
+</html>

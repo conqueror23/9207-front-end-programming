@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>X</title>
+		<style>
+			#block {
+				right: 200px;
+				background: red;
+				height: 100px;
+				position: absolute;
+				width: 100px;
+			}
+			#block1 {
+				left: 200px;
+				background: yellow;
+				height: 100px;
+				position: absolute;
+				width: 100px;
+			}
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+
+			var slideDir = "d";
+
+			function slideDown() {
+
+				slideDir = "d";
+
+				// slide to right
+				$("#block").animate({
+					top: "200px"
+				}, 2000, function() {
+					slideUp();
+				});
+				$("#block1").animate({
+					top: "200px"
+				}, 2000, function() {
+					slideUp();
+				});
+			}
+
+			function slideUp() {
+
+				slideDir = "u";
+
+				// slide to right
+				$("#block").animate({
+					top: "0px"
+				}, 2000, function() {
+					slideDown();
+				});
+				$("#block1").animate({
+					top: "0px"
+				}, 2000, function() {
+					slideDown();
+				});
+			}
+
+
+
+			$(document).ready(function() {
+				$("#start").on("click", function() {
+					if (slideDir == "d") {
+						slideDown();
+					} else {
+						slideUp();
+					}
+					
+				});
+
+				$("#stop").on("click", function() {
+					$("#block").stop(true);
+					$("#block1").stop(true);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="start">start</button>
+		<button id="stop">stop</button>
+		<div id="block"></div>
+		<div id="block1"></div>
+	</body>
+</html>
