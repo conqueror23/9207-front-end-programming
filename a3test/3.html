@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>assignment3.3</title>
+    <style>
+    table{border-collapse: collapse
+
+    }
+    </style>
+    <script src='jquery.js'></script>
+    <script >
+    var lcount=0;
+    var rcount=0;
+        function change_C(){
+          lcount+=1;
+          if (lcount%2==1){
+            $('tr:nth-child(even)').css('background-color','green');
+          }
+          else {
+            $('tr:nth-child(even)').css('background-color','red');
+          }
+        }
+        function change_s(){
+          rcount+=1;
+          if (rcount%2==1) {
+            $('tr:nth-child(odd)').css('border','10px solid blue');$('tr:nth-child(odd)').css('font-size','50px')}
+            else {
+              $('tr:nth-child(odd)').css('border','6px dotted yellow');$('tr:nth-child(odd)').css('font-size','100px')
+            }
+        }
+
+    </script>
+
+</head>
+<body id="2">
+<table border="1">
+    <tr>
+        <th>
+            <input type="button" value="change color"onclick="change_C()">
+        </th>
+        <th>
+            <input type="button" onclick="change_s()"value="change style">
+        </th>
+
+    </tr>
+    <tr>
+        <td>33333333333333</td>
+        <td>444444444444</td>
+    </tr>
+    <tr>
+      <td> show the changes</td>
+      <td>nothing else </td>
+    </tr>
+</table>
+</body>
+</html>

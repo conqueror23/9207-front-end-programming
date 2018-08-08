@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="2.css">
+
+<head>
+<script >
+  $(document).ready(function(){$('chgk').click(function(){$('#foodCompany tr:odd').css('background-color','red')
+});
+</script> 
+</head>
+<script type="text/javascript" src='food.js'></script>
+<script type="text/javascript" src='jquery-3.2.1.min.js'>
+</script>
+<script>$(document).ready(function(){
+   $("#foodCompany tr:even").css("background-color", "blue");
+});
+</script>
+<body>
+
+<div id="hbg"><h1 id='topic'>food product company</h1>
+</div>
+<div id="navi">
+<ul>
+    <li><a href="2.html">home</a></li>
+    <li><a href="">grains</a></li>
+    <li><a href="">fruit</a></li>
+</ul>
+</div>
+<div class="main">
+<input type="button" value="show hidden things" onclick="dh()">
+
+<img id="timg" src="timg.jpg" style="width: 100px;height: 100px;">
+    
+<span id="orders" >
+    corperation code:<input id="corpcode" >
+  
+    <button type="button" onclick="textvalid()">check the code</button>
+<p id="corpd"></p>
+
+
+<p id ='relative'>
+    on the other hand this should be only available for specific conditions as it used relative pathway method
+</p>
+<table border="1" id="foodCompany">
+  <tr>
+    <th>Company</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Unify</td>
+    <td>Chinese</td>
+  </tr>
+  <tr>
+    <td>Coles</td>
+    <td>Australia</td>
+  </tr>
+  <tr>
+    <td>Pesi</td>
+    <td>U.S</td>
+  </tr>
+  <tr>
+    <td>Maraha choice</td>
+    <td>India</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+  </tr>
+</table>
+<!-- try to change the backgcolor by jquery-->
+<input type="button" id="chgk" value="changebkg-color">
+
+
+<p id="explaination">
+Known the interface of a virtual mechine and icons
+
+</div>
+</body>
+</html>

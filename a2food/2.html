@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<link rel="stylesheet" type="text/css" href="2.css">
+<script src="food.js">jave script</script>
+<script src="jquery-3.2.1.min.js">jquery script</script>
+<script >
+        $(document).ready(function(){$('#mb').click(function(){$('*').hide();
+    });
+    });
+    </script>
+</head>
+<body>
+
+
+<div id="navi">
+    <h1 onclick="changeText(this)">best food</h1>
+    <span>
+    <ul id="nb">
+        <li>
+        <a href="2.html">home</a>
+        </li>
+        <li>
+            <a href="1.html">raw product</a>
+        </li>
+        <li>
+            <a href="#history">meals</a>
+        </li>
+        <li>
+            <a href="1.html#relatvie">outside bookmark</a>
+        </li>
+            <li>
+            <a href="mailto:wayneborong@gmail.com">contact us</a>
+        </li>
+        </span>
+
+    </ul>
+    </div>
+<div class="main">
+    First input:<input type="text" id="fo">
+    Second input:<input type="text" id="so">
+    <input type="button" value="combines input" onclick="calo()">
+    <p>The combination is<span id="combination"></span></p>
+    <p> the biggest number of (1 , 3, 159,12) is <span id='br'></span> </p>
+    <input type="button" value="maxnumber of these above" onclick="maxn()">
+    <hr>
+    
+    <input type="button" value="hide resteraunt" onclick="$('#sds').hide()">
+    <input type="button" value="show resteraunt" onclick="$('#sds').show()">
+<span id="resteraunt">
+    <figure id="sds">
+    <img src="fr.jpg" onclick="changeText(this)" style="width: 35mm;height: 35mm;">
+    <img src="burger.png" style="width: 35mm;height: 35mm;">
+    <img src="noodles.jpg" style="width: 35mm;height: 35mm;">
+    </span>
+    </figure>
+    </div>
+
+<div id="referr">
+    <a href="#navi"><img src="Top.png" style="width: 40px;height: 40px;"></a>
+    </div>
+
+<div id="tool">
+        <h3><center> tools</center></h3>
+        <hr>
+        <p id="current"> time is </p>
+        <input type="button" id="date" value="time" onclick="dt()">
+        <a href="">
+        <a href="https://notepad-plus-plus.org/"></a>
+        <a href="http://www.adobe.com/au/products/dreamweaver.html"></a>
+        <select id="degree">
+            <option>bachelor</option>
+            <option>master</option>
+            <option>PHD</option>
+            </select>
+            <input type="button" value="disable list" onclick="disable()">
+            <input type="button" value="enable list" onclick="enable()">
+    </div>
+
+<div id="s">
+    
+    </div>
+<div id="time">
+    <center> magic Control </center></time>
+    <input type="button" value="magic button" id="mb">
+
+    </div>
+    </p>
+    
+    </div>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" id="bottom">
+    <p>mouse over</p></div>
+    
+</body>
+</html>

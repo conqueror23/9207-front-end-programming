@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src='test.js'></script>
+<script src='jquery.js'></script>
+<script>
+$(document).ready(function () {
+  $('input[type=file]').change(function () {
+    console.log('The file to pload is '+this.value);
+  });
+});
+$(document).ready(function () {
+  $(':file').off('change',alterFileName);
+
+});
+var jQueryLink=$("<a href='www.baidu.com' tile='baidu'> come to see use</a>")
+function alterFileName(){
+  console.log('The file select is : ' + this.value);
+}
+$(document).ready(function () {$('#b').click(function () {$('#links').prepend(jQueryLink)
+
+})
+
+})
+$('.out').wrap('<div class="out1"/>')
+$('.contact').wrap(function () {return "<div class='out1' title='visit"$(this).html()"'></div>"
+
+})
+</script>
+    <title></title>
+</head>
+<body>
+  <div id="links">
+    w3cschool.com
+  </div>
+  <div class="out">
+    <div class="out1">11111111
+      <div class="inout1">1-1111111
+      </div>
+    </div>
+    <div class="out1">1.222222222
+      <div class="inout2">1-222222
+      </div>
+    </div>
+    <div class="out2">22222222
+      <span>werwerwerwerwer<br>sdfsdfsdfasdffs</span>
+    </div>
+  </div>
+  <input type="file">
+<input type="button" id="b" value="for test purpose">
+<p id="result">1231321</p>
+</body>
+</html>

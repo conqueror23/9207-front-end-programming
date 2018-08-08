@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script> 
+$(document).ready(function(){
+    $("#car2").hide();
+    var css = {left:'500px'};
+    $("#start").click(function(){
+        if(css.left=='500px')
+            {$("#car2").css("left","500px");
+             $("#car1").animate(css,1000,rowBack);}
+        else        
+            {$("#car1").css("left","0px");
+             $("#car2").animate(css,1000,rowBack);}
+    function rowBack(){         
+        if(css.left=='0px')
+            {$("#car1").show();         
+            css.left='500px';
+            $("#car2").hide();
+            $("#car2").animate(css,1000);
+            }
+        else if(css.left=='500px')  
+            {$("#car1").hide();     
+            css.left='0px';
+            $("#car2").show();
+            $("#car2").animate(css,1000);
+            }
+        $("#car1").animate(css,1000,rowBack);
+        }
+  });
+   $("#stop").click(function(){
+    $("#car1").stop();
+    $("#car2").stop();
+  });
+});
+</script> 
+</head>
+ 
+<body>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+<div>
+<image id="car1" src="images/car.png" style="height:200px;width:450px;position:absolute;"/>
+<image id="car2" src="images/car2.png" style="height:200px;width:450px;position:absolute;"/>
+</div>
+
+</body>
+</html>
